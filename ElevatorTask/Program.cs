@@ -32,7 +32,7 @@ namespace ElevatorTask
             while (input != quit)
             {
                 Console.WriteLine("Select your action:");
-                Console.WriteLine("Press 'a' to call elevator or press 'b' if you are in elevator");
+                Console.WriteLine("Press 'q' to quit, press 'a' to call elevator or press 'b' if you are in elevator");
                 input = Console.ReadLine();
                 if (input == selectionCallElevator)
                 {
@@ -42,7 +42,7 @@ namespace ElevatorTask
                     int floor;
                     if (int.TryParse(input, out floor))
                     {
-                        Elevator currentElevator = manager.GetClosesedElevator(currentBuilding, floor);
+                        Elevator currentElevator = manager.GetClosestElevator(currentBuilding, floor);
                         manager.ElevatorCall(currentBuilding, floor, currentElevator.Id);
                         currentElevator.IsBusy = true;
                         Console.WriteLine($"Elevator ID is: {currentElevator.Id}");

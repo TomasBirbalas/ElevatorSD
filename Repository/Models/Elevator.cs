@@ -7,7 +7,6 @@ namespace Repository.Models
     {
         public int Id { get; }
         public int CurrentFloor { get; set; }
-        //public Queue<RequestsOfElevator> Requests { get; set; }
         public ElevatorStatus Status { get; set; }
         public bool IsBusy { get; set; }
         public DoorStatus ElevatorDoorStatus { get; set; }
