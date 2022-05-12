@@ -66,7 +66,7 @@ namespace Business.Services
 					break;
 			}
 		}
-		public Elevator GetClosesedElevator(Building currentBuilding, int floorRequest)
+		public Elevator GetClosestElevator(Building currentBuilding, int floorRequest)
         {
 			List<Elevator> listOfElevators = currentBuilding.Elevators;
 			List<Elevator> listOfAvailableElevators = new List<Elevator>();
